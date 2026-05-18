@@ -595,7 +595,8 @@ ${PRODUCTS.map(p=>`- ${p.name}（${p.price}）：${p.tags}`).join('\n')}
 6. 如果问题超出产品范围，说明并引导联系客服`;
 
 // ─── Gemini API call (via Netlify proxy — key is server-side only) ──
-const GEMINI_URL = '/api/gemini';
+const GEMINI_KEY = 'AIzaSyCM7eDziHDHu2iXWe-o1vB_Ox-n89wnlUo';
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`;
 
 let chatHistory = [];
 
